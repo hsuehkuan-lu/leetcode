@@ -59,14 +59,14 @@ public:
         this->k = k;
         for(auto &i: nums) {
             min_heap.push(i);
-            while(min_heap.size() > k)
+            if(min_heap.size() > k)
                 min_heap.pop();
         }
     }
     
     int add(int val) {
         min_heap.push(val);
-        while(min_heap.size() > k)
+        if(min_heap.size() > k)
             min_heap.pop();
         return min_heap.top();
     }
