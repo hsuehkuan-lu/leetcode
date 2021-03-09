@@ -46,7 +46,7 @@ public:
         }
         for(auto &i: mp) {
             min_heap.push(i.second);
-            while(min_heap.size() > k)
+            if(min_heap.size() > k)
                 min_heap.pop();
         }
         for(auto &i: mp) {
