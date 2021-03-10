@@ -42,6 +42,11 @@ using namespace std;
 class Solution {
 public:
     bool reduceSearchSpace(vector<vector<int>> &matrix, int target) {
+        /*
+         * It is obvious to observe that the matrix is increasing in two directions
+         * right and down, while decreasing happens in left and up directions.
+         * So an intuition comes from the idea of iteration from right-top or left-bottom.
+         */
         int length = matrix.size();
         int m = 0, n = matrix[0].size() - 1;
         while(m < length && n >= 0) {
