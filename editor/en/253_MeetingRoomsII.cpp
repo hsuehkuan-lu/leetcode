@@ -23,11 +23,26 @@
 #include <iostream>
 #include <vector>
 #include <map>
+#include <queue>
 using namespace std;
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
 public:
-    int minMeetingRooms(vector<vector<int>>& intervals) {
+    int solveMinMeetingRoomsWithPriorityQueue(vector<vector<int>>& intervals) {
+        if(intervals.empty()) return 0;
+        sort(intervals.begin(), intervals.end(), [](const vector<int> &a, const vector<int> &b){
+            return a.front() < b.front();
+        });
+        priority_queue<int, vector<int>, greater<>> min_heap;
+        min_heap.push(intervals[0].back());
+        for(int i=1; i<intervals.size(); ++i) {
+            if(intervals[i].front() >= min_heap.top())
+                min_heap.pop();
+            min_heap.push(intervals[i].back());
+        }
+        return min_heap.size();
+    }
+    int solveMinMeetingRoomsWithMap(vector<vector<int>>& intervals) {
         map<int, int> mp;
         for(auto &i: intervals) {
             ++mp[i[0]];
@@ -39,6 +54,9 @@ public:
             max_cnt = max(cnt, max_cnt);
         }
         return max_cnt;
+    }
+    int minMeetingRooms(vector<vector<int>>& intervals) {
+        return solveMinMeetingRoomsWithPriorityQueue(intervals);
     }
 };
 //leetcode submit region end(Prohibit modification and deletion)
