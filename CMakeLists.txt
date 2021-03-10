@@ -16,3 +16,4 @@ add_executable(215_KthLargestElementInAnArray editor/en/215_KthLargestElementInA
 add_executable(162_FindPeakElement editor/en/162_FindPeakElement.cpp)
 add_executable(33_SearchInRotatedSortedArray editor/en/33_SearchInRotatedSortedArray.cpp)
 add_executable(74_SearchA2DMatrix editor/en/74_SearchA2DMatrix.cpp)
+add_executable(322_CoinChange editor/en/322_CoinChange.cpp)
