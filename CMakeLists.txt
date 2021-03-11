@@ -24,3 +24,4 @@ add_executable(297_SerializeAndDeserializeBinaryTree editor/en/297_SerializeAndD
 add_executable(380_InsertDeleteGetRandomO_1_ "editor/en/380_InsertDeleteGetRandomO_1_.cpp")
 add_executable(172_FactorialTrailingZeroes editor/en/172_FactorialTrailingZeroes.cpp)
 add_executable(46_Permutations editor/en/46_Permutations.cpp)
+add_executable(47_PermutationsII editor/en/47_PermutationsII.cpp)
