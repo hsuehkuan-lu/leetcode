@@ -22,3 +22,4 @@ add_executable(300_LongestIncreasingSubsequence editor/en/300_LongestIncreasingS
 add_executable(251_Flatten2DVector editor/en/251_Flatten2DVector.cpp)
 add_executable(297_SerializeAndDeserializeBinaryTree editor/en/297_SerializeAndDeserializeBinaryTree.cpp)
 add_executable(380_InsertDeleteGetRandomO_1_ "editor/en/380_InsertDeleteGetRandomO_1_.cpp")
+add_executable(172_FactorialTrailingZeroes editor/en/172_FactorialTrailingZeroes.cpp)
