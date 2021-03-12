@@ -40,6 +40,11 @@ using namespace std;
 class Solution {
 public:
     int constantSpaceDpSolution(vector<int> &nums) {
+        /*
+         *  The idea of dynamic programming is to keep track of prev_max/prev_min,
+         *  because the number contains negative (important!), so only keeps max cannot
+         *  solve the problem.
+         */
         if(nums.empty()) return 0;
         if(nums.size() == 1) return nums[0];
         int prev_min = nums[0], prev_max = nums[0], max_total = nums[0];
