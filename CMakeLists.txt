@@ -28,3 +28,4 @@ add_executable(973_KClosestPointsToOrigin editor/en/973_KClosestPointsToOrigin.c
 add_executable(246_StrobogrammaticNumber editor/en/246_StrobogrammaticNumber.cpp)
 add_executable(152_MaximumProductSubarray editor/en/152_MaximumProductSubarray.cpp)
 add_executable(227_BasicCalculatorII editor/en/227_BasicCalculatorII.cpp)
+add_executable(139_WordBreak editor/en/139_WordBreak.cpp)
