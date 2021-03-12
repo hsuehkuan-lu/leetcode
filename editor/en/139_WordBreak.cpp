@@ -87,13 +87,28 @@ public:
         }
         return dp[s.length()];
     }
+    bool optimizeBottomUp(string &s, vector<string> &wordDict) {
+        if(s.empty()) return true;
+        unordered_set<string> word_set(wordDict.begin(), wordDict.end());
+        vector<bool> dp(s.length() + 1);
+        dp[0] = true;
+        for(int i=1; i<=s.length(); ++i) {
+            for(int j=i-1; j>=0; --j) {
+                if(dp[j] && word_set.find(s.substr(j, i-j)) != word_set.end()) {
+                    dp[i] = true;
+                    break;
+                }
+            }
+        }
+        return dp[s.length()];
+    }
     struct compare {
         inline bool operator()(const string &a, const string &b) const {
             return a.size() > b.size();
         }
     };
     bool wordBreak(string s, vector<string>& wordDict) {
-//        return bottomUp(s, wordDict);
+        return optimizeBottomUp(s, wordDict);
         compare c;
         sort(wordDict.begin(), wordDict.end(), c);
         vector<int> dp(s.length() + 1);
