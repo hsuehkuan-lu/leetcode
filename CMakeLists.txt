@@ -30,3 +30,4 @@ add_executable(152_MaximumProductSubarray editor/en/152_MaximumProductSubarray.c
 add_executable(227_BasicCalculatorII editor/en/227_BasicCalculatorII.cpp)
 add_executable(139_WordBreak editor/en/139_WordBreak.cpp)
 add_executable(79_WordSearch editor/en/79_WordSearch.cpp)
+add_executable(1461_CheckIfAStringContainsAllBinaryCodesOfSizeK editor/en/1461_CheckIfAStringContainsAllBinaryCodesOfSizeK.cpp)
