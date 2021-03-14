@@ -35,3 +35,4 @@ add_executable(236_LowestCommonAncestorOfABinaryTree editor/en/236_LowestCommonA
 add_executable(138_CopyListWithRandomPointer editor/en/138_CopyListWithRandomPointer.cpp)
 add_executable(823_BinaryTreesWithFactors editor/en/823_BinaryTreesWithFactors.cpp)
 add_executable(23_MergeKSortedLists editor/en/23_MergeKSortedLists.cpp)
+add_executable(Heap editor/en/Heap.cpp)
