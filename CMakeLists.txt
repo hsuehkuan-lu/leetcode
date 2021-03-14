@@ -34,3 +34,4 @@ add_executable(1461_CheckIfAStringContainsAllBinaryCodesOfSizeK editor/en/1461_C
 add_executable(236_LowestCommonAncestorOfABinaryTree editor/en/236_LowestCommonAncestorOfABinaryTree.cpp)
 add_executable(138_CopyListWithRandomPointer editor/en/138_CopyListWithRandomPointer.cpp)
 add_executable(823_BinaryTreesWithFactors editor/en/823_BinaryTreesWithFactors.cpp)
+add_executable(23_MergeKSortedLists editor/en/23_MergeKSortedLists.cpp)
