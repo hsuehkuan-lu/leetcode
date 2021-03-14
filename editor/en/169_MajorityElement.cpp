@@ -63,15 +63,12 @@ public:
          * and iterate through the vector, if the visited value is different from tracked value,
          * then simply deduct the count.
          * Because the primary element is always the most frequent element in every block!
+         * Boyer-Moore Voting algorithm
          */
         int cnt = 0, candidate = 0;
         for(auto &i: nums) {
-            if(cnt == 0) {
-                candidate = i;
-                ++cnt;
-            }
-            else
-                cnt += (candidate == i) ? 1 : -1;
+            if(cnt == 0) candidate = i;
+            cnt += (candidate == i) ? 1 : -1;
         }
         return candidate;
     }
