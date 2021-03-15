@@ -37,3 +37,4 @@ add_executable(823_BinaryTreesWithFactors editor/en/823_BinaryTreesWithFactors.c
 add_executable(23_MergeKSortedLists editor/en/23_MergeKSortedLists.cpp)
 add_executable(Heap editor/en/Heap.cpp)
 add_executable(1721_SwappingNodesInALinkedList editor/en/1721_SwappingNodesInALinkedList.cpp)
+add_executable(69_Sqrt_x "editor/en/69_Sqrt_x.cpp")
