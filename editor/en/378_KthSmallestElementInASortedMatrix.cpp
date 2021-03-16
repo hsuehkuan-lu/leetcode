@@ -59,6 +59,10 @@ public:
         return pq.top();
     }
     int optimizeMinHeapSolution(vector<vector<int>> &matrix, int k) {
+        /*
+         * The idea of using min_heap is to treat row independent, and then iteratively add the element following
+         * min_heap top, so that it makes sure first k elements are always in ascending order!
+         */
         priority_queue<pair<int, pair<int, int>>, vector<pair<int, pair<int, int>>>, numComparator> min_heap;
         for(int i=0; i<n; ++i)
             min_heap.push(make_pair(matrix[i][0], make_pair(i, 0)));
