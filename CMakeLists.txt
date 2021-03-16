@@ -40,3 +40,4 @@ add_executable(1721_SwappingNodesInALinkedList editor/en/1721_SwappingNodesInALi
 add_executable(69_Sqrt_x "editor/en/69_Sqrt_x.cpp")
 add_executable(171_ExcelSheetColumnNumber editor/en/171_ExcelSheetColumnNumber.cpp)
 add_executable(378_KthSmallestElementInASortedMatrix editor/en/378_KthSmallestElementInASortedMatrix.cpp)
+add_executable(289_GameOfLife editor/en/289_GameOfLife.cpp)
