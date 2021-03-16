@@ -122,6 +122,8 @@ public:
         vector<bool> visited(numCourses), path(numCourses);
         for(auto &edge: prerequisites)
             graph[edge.back()].push_back(edge.front());
+        // check every node and its children, the appending order should be bottom-up
+        // from the leaf node to root node, so that's the reason to reverse the vector
         for(int i=0; i<numCourses; ++i) {
             if(isCycle(graph, i, visited, path, ans))
                 return {};
