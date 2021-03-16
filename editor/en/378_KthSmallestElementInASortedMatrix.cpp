@@ -45,6 +45,11 @@ using namespace std;
 class Solution {
 public:
     int n;
+    struct numComparator {
+        bool operator()(const pair<int, pair<int, int>> &a, const pair<int, pair<int, int>> &b) {
+            return a.first > b.first;
+        }
+    };
     int minHeapSolution(vector<vector<int>>& matrix, int k) {
         priority_queue<int, vector<int>, greater<>> pq;
         for(auto &row: matrix)
@@ -52,6 +57,24 @@ public:
                 pq.push(col);
         for(int i=0; i<k-1; ++i) pq.pop();
         return pq.top();
+    }
+    int optimizeMinHeapSolution(vector<vector<int>> &matrix, int k) {
+        priority_queue<pair<int, pair<int, int>>, vector<pair<int, pair<int, int>>>, numComparator> min_heap;
+        for(int i=0; i<n; ++i)
+            min_heap.push(make_pair(matrix[i][0], make_pair(i, 0)));
+        int cnt = 0, result = 0;
+        while(!min_heap.empty()) {
+            auto heap_top = min_heap.top();
+            min_heap.pop();
+            result = heap_top.first;
+            if(++cnt == k) break;
+            ++heap_top.second.second;
+            if(heap_top.second.second < n) {
+                heap_top.first = matrix[heap_top.second.first][heap_top.second.second];
+                min_heap.push(heap_top);
+            }
+        }
+        return result;
     }
     int getPosition(vector<vector<int>> &matrix, int target, int boundary[]) {
         int row = 0, col = n-1, cnt = 0;
@@ -68,6 +91,10 @@ public:
         return cnt;
     }
     int binarySearchSolution(vector<vector<int>> &matrix, int k) {
+        /*
+         * The idea of using binary search is based on the row and column of matrix are in ascending order,
+         * so iteratively find the middle point of the array, can check its position can find out the K-th element.
+         */
         int position = 0;
         int left = matrix[0][0], right = matrix[n-1][n-1];
         while(left < right) {
@@ -85,7 +112,7 @@ public:
     }
     int kthSmallest(vector<vector<int>>& matrix, int k) {
         n = matrix.size();
-        return binarySearchSolution(matrix, k);
+        return optimizeMinHeapSolution(matrix, k);
     }
 };
 //leetcode submit region end(Prohibit modification and deletion)
