@@ -42,3 +42,5 @@ add_executable(171_ExcelSheetColumnNumber editor/en/171_ExcelSheetColumnNumber.c
 add_executable(378_KthSmallestElementInASortedMatrix editor/en/378_KthSmallestElementInASortedMatrix.cpp)
 add_executable(289_GameOfLife editor/en/289_GameOfLife.cpp)
 add_executable(287_FindTheDuplicateNumber editor/en/287_FindTheDuplicateNumber.cpp)
+add_executable(207_CourseSchedule editor/en/207_CourseSchedule.cpp)
+add_executable(210_CourseScheduleII editor/en/210_CourseScheduleII.cpp)
