@@ -45,3 +45,7 @@ add_executable(287_FindTheDuplicateNumber editor/en/287_FindTheDuplicateNumber.c
 add_executable(207_CourseSchedule editor/en/207_CourseSchedule.cpp)
 add_executable(210_CourseScheduleII editor/en/210_CourseScheduleII.cpp)
 add_executable(606_ConstructStringFromBinaryTree editor/en/606_ConstructStringFromBinaryTree.cpp)
+add_executable(444_SequenceReconstruction editor/en/444_SequenceReconstruction.cpp)
+add_executable(144_BinaryTreePreorderTraversal editor/en/144_BinaryTreePreorderTraversal.cpp)
+add_executable(94_BinaryTreeInorderTraversal editor/en/94_BinaryTreeInorderTraversal.cpp)
+add_executable(145_BinaryTreePostorderTraversal editor/en/145_BinaryTreePostorderTraversal.cpp)
