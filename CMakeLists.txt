@@ -50,3 +50,5 @@ add_executable(144_BinaryTreePreorderTraversal editor/en/144_BinaryTreePreorderT
 add_executable(94_BinaryTreeInorderTraversal editor/en/94_BinaryTreeInorderTraversal.cpp)
 add_executable(145_BinaryTreePostorderTraversal editor/en/145_BinaryTreePostorderTraversal.cpp)
 add_executable(250_CountUnivalueSubtrees editor/en/250_CountUnivalueSubtrees.cpp)
+add_executable(536_ConstructBinaryTreeFromString editor/en/536_ConstructBinaryTreeFromString.cpp)
+add_executable(341_FlattenNestedListIterator editor/en/341_FlattenNestedListIterator.cpp)
