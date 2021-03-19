@@ -87,47 +87,81 @@
 #include <iostream>
 #include <vector>
 using namespace std;
+//class TicTacToe {
+//private:
+//    int state, n;
+//    vector<vector<int>> board;
+//public:
+//    /** Initialize your data structure here. */
+//    TicTacToe(int n) {
+//        this->n = n;
+//        state = 0;
+//        vector<vector<int>> b(n, vector<int>(n, 0));
+//        board = b;
+//    }
+//    bool checkWin(const int &row, const int &col, const int &player) {
+//        // check column & row
+//        bool row_win, col_win, diag_win;
+//        row_win = col_win = true;
+//        diag_win = false;
+//        for(int i=0; i<n; ++i) {
+//            if(board[row][i] != player) row_win = false;
+//            if(board[i][col] != player) col_win = false;
+//            if(!row_win && !col_win) break;
+//        }
+//
+//        if(row == col) {
+//            bool left_diag = true;
+//            for(int i=0; i<n; ++i) {
+//                if(board[i][i] != player) left_diag = false;
+//                if(!left_diag) break;
+//            }
+//            diag_win |= left_diag;
+//        }
+//        if(row == n - 1 - col) {
+//            bool right_diag = true;
+//            for(int i=0; i<n; ++i) {
+//                if(board[i][n-1-i] != player) right_diag = false;
+//                if(!right_diag) break;
+//            }
+//            diag_win |= right_diag;
+//        }
+//        return row_win || col_win || diag_win;
+//    }
+//
+//    /** Player {player} makes a move at ({row}, {col}).
+//        @param row The row of the board.
+//        @param col The column of the board.
+//        @param player The player, can be either 1 or 2.
+//        @return The current winning condition, can be either:
+//                0: No one wins.
+//                1: Player 1 wins.
+//                2: Player 2 wins. */
+//    int move(int row, int col, int player) {
+//        if(board[row][col] == 0) {
+//            board[row][col] = player;
+//            if(checkWin(row, col, player))
+//                state = player;
+//        }
+//        return state;
+//    }
+//};
 //leetcode submit region begin(Prohibit modification and deletion)
+/*
+ * Instead of 2-D matrix implementation, the problem can be transformed to two 1-D arrays!
+ */
 class TicTacToe {
 private:
-    int state, n;
-    vector<vector<int>> board;
+    int n;
+    int left_diag, right_diag;
+    vector<int> rows, cols;
 public:
     /** Initialize your data structure here. */
     TicTacToe(int n) {
         this->n = n;
-        state = 0;
-        vector<vector<int>> b(n, vector<int>(n, 0));
-        board = b;
-    }
-    bool checkWin(const int &row, const int &col, const int &player) {
-        // check column & row
-        bool row_win, col_win, diag_win;
-        row_win = col_win = true;
-        diag_win = false;
-        for(int i=0; i<n; ++i) {
-            if(board[row][i] != player) row_win = false;
-            if(board[i][col] != player) col_win = false;
-            if(!row_win && !col_win) break;
-        }
-
-        if(row == col) {
-            bool left_diag = true;
-            for(int i=0; i<n; ++i) {
-                if(board[i][i] != player) left_diag = false;
-                if(!left_diag) break;
-            }
-            diag_win |= left_diag;
-        }
-        if(row == n - 1 - col) {
-            bool right_diag = true;
-            for(int i=0; i<n; ++i) {
-                if(board[i][n-1-i] != player) right_diag = false;
-                if(!right_diag) break;
-            }
-            diag_win |= right_diag;
-        }
-        return row_win || col_win || diag_win;
+        rows.resize(n, 0);
+        cols.resize(n, 0);
+        left_diag = right_diag = 0;
     }
     
     /** Player {player} makes a move at ({row}, {col}).
@@ -139,12 +173,32 @@ public:
                 1: Player 1 wins.
                 2: Player 2 wins. */
     int move(int row, int col, int player) {
-        if(board[row][col] == 0) {
-            board[row][col] = player;
-            if(checkWin(row, col, player))
-                state = player;
+        if(player == 1) {
+            ++rows[row], ++cols[col];
+            if(row == col) {
+                ++left_diag;
+                if(left_diag == n) return player;
+            }
+            if(row == n - 1 - col) {
+                ++right_diag;
+                if(right_diag == n) return player;
+            }
+            if(rows[row] == n) return player;
+            if(cols[col] == n) return player;
+        } else {
+            --rows[row], --cols[col];
+            if(row == col) {
+                --left_diag;
+                if(left_diag == -n) return player;
+            }
+            if(row == n - 1 - col) {
+                --right_diag;
+                if(right_diag == -n) return player;
+            }
+            if(rows[row] == -n) return player;
+            if(cols[col] == -n) return player;
         }
-        return state;
+        return 0;
     }
 };
 
