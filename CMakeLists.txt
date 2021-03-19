@@ -49,3 +49,4 @@ add_executable(444_SequenceReconstruction editor/en/444_SequenceReconstruction.c
 add_executable(144_BinaryTreePreorderTraversal editor/en/144_BinaryTreePreorderTraversal.cpp)
 add_executable(94_BinaryTreeInorderTraversal editor/en/94_BinaryTreeInorderTraversal.cpp)
 add_executable(145_BinaryTreePostorderTraversal editor/en/145_BinaryTreePostorderTraversal.cpp)
+add_executable(250_CountUnivalueSubtrees editor/en/250_CountUnivalueSubtrees.cpp)
