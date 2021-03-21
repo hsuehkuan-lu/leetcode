@@ -66,7 +66,7 @@ public:
         for(auto &course: prerequisites) graph[course.back()].push_back(course.front());
         vector<bool> path(numCourses), visited(numCourses);
         for(int i=0; i<numCourses; ++i) {
-            if(!visited[i] && isCycle(graph, i, path, visited)) return false;
+            if(isCycle(graph, i, path, visited)) return false;
         }
         return true;
     }
@@ -93,8 +93,8 @@ public:
         return total == numCourses;
     }
     bool canFinish(int numCourses, vector<vector<int>>& prerequisites) {
-//        return dfsSolution(numCourses, prerequisites);
-        return topologicalSortSolution(numCourses, prerequisites);
+        return dfsSolution(numCourses, prerequisites);
+//        return topologicalSortSolution(numCourses, prerequisites);
     }
 };
 //leetcode submit region end(Prohibit modification and deletion)
