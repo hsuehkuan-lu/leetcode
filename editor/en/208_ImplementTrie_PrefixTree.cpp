@@ -67,37 +67,33 @@ public:
     /** Inserts a word into the trie. */
     void insert(string word) {
 //        vector<TrieNode*> *node = &root->children;
-        auto *node = &root->children;
-        auto prev = node;
+        auto node = root;
         for(auto &i: word) {
             int idx = i - 'a';
-            if(!(*node)[idx]) (*node)[idx] = new TrieNode();
-            prev = node;
-            node = &(*node)[idx]->children;
+            if(!node->children[idx]) node->children[idx] = new TrieNode();
+            node = node->children[idx];
         }
-        (*prev)[word.back() - 'a']->is_word = true;
+        node->is_word = true;
     }
-    
+
     /** Returns if the word is in the trie. */
     bool search(string word) {
-        auto *node = &root->children;
-        auto prev = node;
+        auto node = root;
         for(auto &i: word) {
             int idx = i - 'a';
-            if(!(*node)[idx]) return false;
-            prev = node;
-            node = &(*node)[idx]->children;
+            if(!node->children[idx]) return false;
+            node = node->children[idx];
         }
-        return (*prev)[word.back() - 'a']->is_word;
+        return node->is_word;
     }
-    
+
     /** Returns if there is any word in the trie that starts with the given prefix. */
     bool startsWith(string prefix) {
-        auto *node = &root->children;
+        auto node = root;
         for(auto &i: prefix) {
             int idx = i - 'a';
-            if(!(*node)[idx]) return false;
-            node = &(*node)[idx]->children;
+            if(!node->children[idx]) return false;
+            node = node->children[idx];
         }
         return true;
     }
