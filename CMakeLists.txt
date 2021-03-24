@@ -60,3 +60,5 @@ add_executable(340_LongestSubstringWithAtMostKDistinctCharacters editor/en/340_L
 add_executable(279_PerfectSquares editor/en/279_PerfectSquares.cpp)
 add_executable(131_PalindromePartitioning editor/en/131_PalindromePartitioning.cpp)
 add_executable(130_SurroundedRegions editor/en/130_SurroundedRegions.cpp)
+add_executable(148_SortList editor/en/148_SortList.cpp)
+add_executable(395_LongestSubstringWithAtLeastKRepeatingCharacters editor/en/395_LongestSubstringWithAtLeastKRepeatingCharacters.cpp)
