@@ -62,3 +62,5 @@ add_executable(131_PalindromePartitioning editor/en/131_PalindromePartitioning.c
 add_executable(130_SurroundedRegions editor/en/130_SurroundedRegions.cpp)
 add_executable(148_SortList editor/en/148_SortList.cpp)
 add_executable(395_LongestSubstringWithAtLeastKRepeatingCharacters editor/en/395_LongestSubstringWithAtLeastKRepeatingCharacters.cpp)
+add_executable(1197_MinimumKnightMoves editor/en/1197_MinimumKnightMoves.cpp)
+add_executable(695_MaxAreaOfIsland editor/en/695_MaxAreaOfIsland.cpp)
