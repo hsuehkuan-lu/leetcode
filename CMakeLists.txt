@@ -65,3 +65,6 @@ add_executable(395_LongestSubstringWithAtLeastKRepeatingCharacters editor/en/395
 add_executable(1197_MinimumKnightMoves editor/en/1197_MinimumKnightMoves.cpp)
 add_executable(695_MaxAreaOfIsland editor/en/695_MaxAreaOfIsland.cpp)
 add_executable(547_NumberOfProvinces editor/en/547_NumberOfProvinces.cpp)
+add_executable(1209_RemoveAllAdjacentDuplicatesInStringII editor/en/1209_RemoveAllAdjacentDuplicatesInStringII.cpp)
+add_executable(739_DailyTemperatures editor/en/739_DailyTemperatures.cpp)
+add_executable(811_SubdomainVisitCount editor/en/811_SubdomainVisitCount.cpp)
