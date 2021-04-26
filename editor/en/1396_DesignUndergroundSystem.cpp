@@ -132,7 +132,8 @@ using namespace std;
 //leetcode submit region begin(Prohibit modification and deletion)
 class UndergroundSystem {
     unordered_map<int, pair<string, int>> mp;
-    unordered_map<string, unordered_map<string, vector<int>>> travels;
+//    unordered_map<string, unordered_map<string, vector<int>>> travels;
+    unordered_map<string, unordered_map<string, pair<int, double>>> travels;
 public:
     UndergroundSystem() {
         
@@ -144,18 +145,20 @@ public:
     
     void checkOut(int id, string stationName, int t) {
         auto elem = mp[id];
-        travels[elem.first][stationName].push_back(t - elem.second);
+        if(travels[elem.first].count(stationName)) {
+            int cur = (travels[elem.first][stationName].first)++;
+            travels[elem.first][stationName].second =
+                    (cur * travels[elem.first][stationName].second + (t - elem.second)) / (cur + 1);
+        } else {
+            travels[elem.first][stationName] = make_pair(1, t - elem.second);
+        }
         mp.erase(id);
     }
     
     double getAverageTime(string startStation, string endStation) {
         if(!travels.count(startStation)) return 0;
         if(!travels[startStation].count(endStation)) return 0;
-        double time = 0;
-        for(auto &i: travels[startStation][endStation]) {
-            time += i;
-        }
-        return time / travels[startStation][endStation].size();
+        return travels[startStation][endStation].second;
     }
 };
 
