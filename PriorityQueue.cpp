@@ -19,7 +19,8 @@ public:
             return a > b;
         }
     };
-    priority_queue<int, vector<int>, minHeap> p;
+//    priority_queue<int, vector<int>, minHeap> p;
+    priority_queue<int> p;
 };
 
 int main() {
