@@ -88,3 +88,4 @@ add_executable(1152_AnalyzeUserWebsiteVisitPattern editor/en/1152_AnalyzeUserWeb
 add_executable(253_MeetingRoomsII editor/en/253_MeetingRoomsII.cpp)
 add_executable(367_ValidPerfectSquare editor/en/367_ValidPerfectSquare.cpp)
 add_executable(CppBound CppBound.cpp)
+add_executable(994_RottingOranges editor/en/994_RottingOranges.cpp)
