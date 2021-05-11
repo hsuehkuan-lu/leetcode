@@ -95,3 +95,4 @@ add_executable(1354_ConstructTargetArrayWithMultipleSums editor/en/1354_Construc
 add_executable(204_CountPrimes editor/en/204_CountPrimes.cpp)
 add_executable(4_MedianOfTwoSortedArrays editor/en/4_MedianOfTwoSortedArrays.cpp)
 add_executable(1423_MaximumPointsYouCanObtainFromCards editor/en/1423_MaximumPointsYouCanObtainFromCards.cpp)
+add_executable(35_SearchInsertPosition editor/en/35_SearchInsertPosition.cpp)
