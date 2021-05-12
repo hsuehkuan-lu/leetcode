@@ -56,16 +56,18 @@
 using namespace std;
 //leetcode submit region begin(Prohibit modification and deletion)
 class NumMatrix {
+    int m, n;
     int **dp;
 public:
     NumMatrix(vector<vector<int>>& matrix) {
         if(matrix.empty() || matrix[0].empty()) return;
-        dp = new int*[matrix.size()+1];
-        for(int i=0; i<=matrix.size(); ++i) {
-            dp[i] = new int[matrix[0].size()+1]();
+        m = matrix.size(), n = matrix[0].size();
+        dp = new int*[m+1];
+        for(int i=0; i<=m; ++i) {
+            dp[i] = new int[n+1]();
         }
-        for(int i=0; i<matrix.size(); ++i) {
-            for(int j=0; j<matrix[0].size(); ++j) {
+        for(int i=0; i<m; ++i) {
+            for(int j=0; j<n; ++j) {
                 dp[i+1][j+1] = dp[i][j+1] + dp[i+1][j] - dp[i][j] + matrix[i][j];
             }
         }
