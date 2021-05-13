@@ -97,3 +97,4 @@ add_executable(4_MedianOfTwoSortedArrays editor/en/4_MedianOfTwoSortedArrays.cpp
 add_executable(1423_MaximumPointsYouCanObtainFromCards editor/en/1423_MaximumPointsYouCanObtainFromCards.cpp)
 add_executable(35_SearchInsertPosition editor/en/35_SearchInsertPosition.cpp)
 add_executable(304_RangeSumQuery2DImmutable editor/en/304_RangeSumQuery2DImmutable.cpp)
+add_executable(244_ShortestWordDistanceII editor/en/244_ShortestWordDistanceII.cpp)
