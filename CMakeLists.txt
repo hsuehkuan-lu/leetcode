@@ -98,3 +98,4 @@ add_executable(1423_MaximumPointsYouCanObtainFromCards editor/en/1423_MaximumPoi
 add_executable(35_SearchInsertPosition editor/en/35_SearchInsertPosition.cpp)
 add_executable(304_RangeSumQuery2DImmutable editor/en/304_RangeSumQuery2DImmutable.cpp)
 add_executable(244_ShortestWordDistanceII editor/en/244_ShortestWordDistanceII.cpp)
+add_executable(816_AmbiguousCoordinates editor/en/816_AmbiguousCoordinates.cpp)
