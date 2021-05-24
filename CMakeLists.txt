@@ -100,3 +100,4 @@ add_executable(304_RangeSumQuery2DImmutable editor/en/304_RangeSumQuery2DImmutab
 add_executable(244_ShortestWordDistanceII editor/en/244_ShortestWordDistanceII.cpp)
 add_executable(816_AmbiguousCoordinates editor/en/816_AmbiguousCoordinates.cpp)
 add_executable(462_MinimumMovesToEqualArrayElementsII editor/en/462_MinimumMovesToEqualArrayElementsII.cpp)
+add_executable(709_ToLowerCase editor/en/709_ToLowerCase.cpp)
