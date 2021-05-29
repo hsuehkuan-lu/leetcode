@@ -101,3 +101,4 @@ add_executable(244_ShortestWordDistanceII editor/en/244_ShortestWordDistanceII.c
 add_executable(816_AmbiguousCoordinates editor/en/816_AmbiguousCoordinates.cpp)
 add_executable(462_MinimumMovesToEqualArrayElementsII editor/en/462_MinimumMovesToEqualArrayElementsII.cpp)
 add_executable(709_ToLowerCase editor/en/709_ToLowerCase.cpp)
+add_executable(1695_MaximumErasureValue editor/en/1695_MaximumErasureValue.cpp)
