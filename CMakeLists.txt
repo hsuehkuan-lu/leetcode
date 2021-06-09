@@ -103,3 +103,4 @@ add_executable(462_MinimumMovesToEqualArrayElementsII editor/en/462_MinimumMoves
 add_executable(709_ToLowerCase editor/en/709_ToLowerCase.cpp)
 add_executable(1695_MaximumErasureValue editor/en/1695_MaximumErasureValue.cpp)
 add_executable(1167_MinimumCostToConnectSticks editor/en/1167_MinimumCostToConnectSticks.cpp)
+add_executable(164_MaximumGap editor/en/164_MaximumGap.cpp)
