@@ -41,19 +41,41 @@ using namespace std;
 #define MODULO 1000000007
 class Solution {
 public:
-    int kInversePairs(int n, int k) {
+    int OneDDP(int n, int k) {
         if(k == 0) return 1;
-        int dp[n+1][k+1];
+//        vector<int> dp(max(n, k) + 1);
+//        vector<int> residuals(max(n, k) + 1);
+        long dp[max(n, k)+1];
+        long residuals[max(n, k)+1];
+        memset(dp, 0, sizeof dp);
+        memset(residuals, 0, sizeof residuals);
+        for(int i=1; i<=n; ++i) {
+            dp[0] = residuals[0] = 1;
+            for(int j=1; j<=min(k, i * (i-1) / 2); ++j) {
+                residuals[j] = dp[j];
+                dp[j] = dp[j] + dp[j-1];
+                if(j >= i) dp[j] -= residuals[j-i];
+                dp[j] = (dp[j] + MODULO) % MODULO;
+            }
+        }
+        return (int) dp[k];
+    }
+    int optimizedDP(int n, int k) {
+        if(k == 0) return 1;
+        long dp[n+1][k+1];
         memset(dp, 0, sizeof dp);
         for(int i=1; i<=n; ++i) {
             dp[i][0] = 1;
-            for(int j=1; j<=k; ++j) {
-                for(int plus=j; plus>=max(0, j-i+1); --plus) {
-                    dp[i][j] = (dp[i][j] + dp[i-1][plus]) % MODULO;
-                }
+            for(int j=1; j<=min(k, i * (i-1) / 2); ++j) {
+                dp[i][j] = dp[i-1][j] + dp[i][j-1];
+                if(j >= i) dp[i][j] -= dp[i-1][j - i];
+                dp[i][j] = (dp[i][j] + MODULO) % MODULO;
             }
         }
-        return dp[n][k];
+        return (int) dp[n][k];
+    }
+    int kInversePairs(int n, int k) {
+        return OneDDP(n, k);
     }
 };
 //leetcode submit region end(Prohibit modification and deletion)
