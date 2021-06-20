@@ -106,3 +106,5 @@ add_executable(1167_MinimumCostToConnectSticks editor/en/1167_MinimumCostToConne
 add_executable(164_MaximumGap editor/en/164_MaximumGap.cpp)
 add_executable(1182_ShortestDistanceToTargetColor editor/en/1182_ShortestDistanceToTargetColor.cpp)
 add_executable(629_KInversePairsArray editor/en/629_KInversePairsArray.cpp)
+add_executable(11_ContainerWithMostWater editor/en/11_ContainerWithMostWater.cpp)
+add_executable(31_NextPermutation editor/en/31_NextPermutation.cpp)
