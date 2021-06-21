@@ -35,6 +35,7 @@
 #include <vector>
 using namespace std;
 //leetcode submit region begin(Prohibit modification and deletion)
+static int x = [](){cin.tie(0); cout.tie(0); ios::sync_with_stdio(0); return 0;}();
 class Solution {
 public:
     void nextPermutation(vector<int>& nums) {
