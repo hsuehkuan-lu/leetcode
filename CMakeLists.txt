@@ -108,3 +108,4 @@ add_executable(1182_ShortestDistanceToTargetColor editor/en/1182_ShortestDistanc
 add_executable(629_KInversePairsArray editor/en/629_KInversePairsArray.cpp)
 add_executable(11_ContainerWithMostWater editor/en/11_ContainerWithMostWater.cpp)
 add_executable(31_NextPermutation editor/en/31_NextPermutation.cpp)
+add_executable(43_MultiplyStrings editor/en/43_MultiplyStrings.cpp)
