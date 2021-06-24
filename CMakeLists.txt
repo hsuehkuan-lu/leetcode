@@ -110,3 +110,4 @@ add_executable(11_ContainerWithMostWater editor/en/11_ContainerWithMostWater.cpp
 add_executable(31_NextPermutation editor/en/31_NextPermutation.cpp)
 add_executable(43_MultiplyStrings editor/en/43_MultiplyStrings.cpp)
 add_executable(76_MinimumWindowSubstring editor/en/76_MinimumWindowSubstring.cpp)
+add_executable(1059_AllPathsFromSourceLeadToDestination editor/en/1059_AllPathsFromSourceLeadToDestination.cpp)
