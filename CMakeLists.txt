@@ -114,3 +114,4 @@ add_executable(1059_AllPathsFromSourceLeadToDestination editor/en/1059_AllPathsF
 add_executable(135_Candy editor/en/135_Candy.cpp)
 add_executable(1047_RemoveAllAdjacentDuplicatesInString editor/en/1047_RemoveAllAdjacentDuplicatesInString.cpp)
 add_executable(186_ReverseWordsInAStringII editor/en/186_ReverseWordsInAStringII.cpp)
+add_executable(205_IsomorphicStrings editor/en/205_IsomorphicStrings.cpp)
