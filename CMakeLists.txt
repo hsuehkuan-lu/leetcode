@@ -116,3 +116,4 @@ add_executable(1047_RemoveAllAdjacentDuplicatesInString editor/en/1047_RemoveAll
 add_executable(186_ReverseWordsInAStringII editor/en/186_ReverseWordsInAStringII.cpp)
 add_executable(205_IsomorphicStrings editor/en/205_IsomorphicStrings.cpp)
 add_executable(159_LongestSubstringWithAtMostTwoDistinctCharacters editor/en/159_LongestSubstringWithAtMostTwoDistinctCharacters.cpp)
+add_executable(124_BinaryTreeMaximumPathSum editor/en/124_BinaryTreeMaximumPathSum.cpp)
