@@ -117,3 +117,5 @@ add_executable(186_ReverseWordsInAStringII editor/en/186_ReverseWordsInAStringII
 add_executable(205_IsomorphicStrings editor/en/205_IsomorphicStrings.cpp)
 add_executable(159_LongestSubstringWithAtMostTwoDistinctCharacters editor/en/159_LongestSubstringWithAtMostTwoDistinctCharacters.cpp)
 add_executable(124_BinaryTreeMaximumPathSum editor/en/124_BinaryTreeMaximumPathSum.cpp)
+add_executable(370_RangeAddition editor/en/370_RangeAddition.cpp)
+add_executable(611_ValidTriangleNumber editor/en/611_ValidTriangleNumber.cpp)
