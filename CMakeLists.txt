@@ -119,3 +119,4 @@ add_executable(159_LongestSubstringWithAtMostTwoDistinctCharacters editor/en/159
 add_executable(124_BinaryTreeMaximumPathSum editor/en/124_BinaryTreeMaximumPathSum.cpp)
 add_executable(370_RangeAddition editor/en/370_RangeAddition.cpp)
 add_executable(611_ValidTriangleNumber editor/en/611_ValidTriangleNumber.cpp)
+add_executable(953_VerifyingAnAlienDictionary editor/en/953_VerifyingAnAlienDictionary.cpp)

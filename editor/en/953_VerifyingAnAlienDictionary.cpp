@@ -49,12 +49,28 @@
 
 
 #include <iostream>
+#include <vector>
+#include <string>
 using namespace std;
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
 public:
+    bool comp(string &a, string &b, int arr[]) {
+        for(int i=0; i<a.size(); ++i) {
+            if(i >= b.size() || arr[a[i] - 'a'] > arr[b[i] - 'a']) return false;
+            else if(arr[a[i] - 'a'] < arr[b[i] - 'a']) break;
+        }
+        return true;
+    }
     bool isAlienSorted(vector<string>& words, string order) {
-        
+        int arr[26] = {0};
+        for(int i=0; i<order.size(); ++i) {
+            arr[order[i] - 'a'] = i;
+        }
+        for(int i=0; i<words.size()-1; ++i) {
+            if(!comp(words[i], words[i+1], arr)) return false;
+        }
+        return true;
     }
 };
 //leetcode submit region end(Prohibit modification and deletion)
@@ -62,5 +78,7 @@ public:
 
 int main() {
     Solution solution;
+    vector<string> words = {"kuvp", "q"};
+    cout << solution.isAlienSorted(words, "hlabcdefgijkmnopqrstuvwxyz");
     return 0;
 }
