@@ -123,3 +123,4 @@ add_executable(953_VerifyingAnAlienDictionary editor/en/953_VerifyingAnAlienDict
 add_executable(18_FourSum editor/en/18_FourSum.cpp)
 add_executable(399_EvaluateDivision editor/en/399_EvaluateDivision.cpp)
 add_executable(25_ReverseNodesInKGroup editor/en/25_ReverseNodesInKGroup.cpp)
+add_executable(127_WordLadder editor/en/127_WordLadder.cpp)
