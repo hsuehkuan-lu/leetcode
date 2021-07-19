@@ -59,47 +59,40 @@ using namespace std;
 //leetcode submit region begin(Prohibit modification and deletion)
 class LRUCache {
 private:
-    int capacity = 0;
-    struct data {
-        int key;
-        int value;
-    };
-    list<data> l;
-    unordered_map<int, list<data>::iterator> mp;
+    int capacity;
+    unordered_map<int, list<pair<int, int>>::iterator> mp;
+    list<pair<int, int>> l;
 public:
     LRUCache(int capacity) {
         this->capacity = capacity;
     }
-
-    void moveToFront(list<data>::iterator &it, int key, int value) {
-        this->l.push_front(data{.key = key, .value = value});
-        this->l.erase(it);
-        this->mp[key] = this->l.begin();
+    void moveToFront(list<pair<int, int>>::iterator &it, int key, int value) {
+        l.push_front({key, value});
+        l.erase(it);
+        mp[key] = l.begin();
     }
-    
     int get(int key) {
-        if(this->mp.find(key) != this->mp.end()) {
-            auto it = this->mp[key];
-            if(it == this->l.begin())
-                return it->value;
-            moveToFront(it, it->key, it->value);
-            return this->l.front().value;
+        if(mp.find(key) != mp.end()) {
+            auto it = mp[key];
+            if(it == l.begin())
+                return it->second;
+            moveToFront(it, it->first, it->second);
+            return l.front().second;
         } else {
             return -1;
         }
     }
-    
+
     void put(int key, int value) {
-        if(this->mp.find(key) != this->mp.end()){
-            moveToFront(this->mp[key], key, value);
+        if(mp.find(key) != mp.end()) {
+            moveToFront(mp[key], key, value);
         } else {
-            if(this->l.size() == this->capacity) {
-                int k = this->l.back().key;
-                this->l.pop_back();
-                this->mp.erase(k);
+            l.push_front({key, value});
+            mp[key] = l.begin();
+            if(l.size() > capacity) {
+                mp.erase(l.back().first);
+                l.pop_back();
             }
-            this->l.push_front(data{.key = key, .value = value});
-            this->mp[key] = this->l.begin();
         }
     }
 };
