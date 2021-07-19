@@ -141,23 +141,24 @@ public:
         unordered_set<string> set(wordList.begin(), wordList.end());
         if(!set.count(endWord)) return 0;
         int ans = 2;
+        // init three sets for start (beginWord), next (middle), end (endWord)
         unordered_set<string> start, next, end;
         start.insert(beginWord);
         end.insert(endWord);
         while(!start.empty()) {
-            for(auto &s: start) {
-                string str = s;
-                for(int i=0; i<s.size(); ++i) {
+            for(auto &word: start) {
+                string tmp = word;
+                for(int i=0; i<word.size(); ++i) {
                     for(int j=0; j<26; ++j) {
-                        str[i] = 'a' + j;
-                        if(str == s) continue;
-                        if(end.count(str)) return ans;
-                        if(set.count(str)) {
-                            next.insert(str);
-                            set.erase(str);
+                        tmp[i] = 'a' + j;
+                        if(tmp == word) continue;
+                        if(end.count(tmp)) return ans;
+                        if(set.count(tmp)) {
+                            next.insert(tmp);
+                            set.erase(tmp);
                         }
                     }
-                    str[i] = s[i];
+                    tmp[i] = word[i];
                 }
             }
             start = next;
