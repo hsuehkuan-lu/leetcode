@@ -128,3 +128,4 @@ add_executable(235_LowestCommonAncestorOfABinarySearchTree editor/en/235_LowestC
 add_executable(838_PushDominoes editor/en/838_PushDominoes.cpp)
 add_executable(461_HammingDistance editor/en/461_HammingDistance.cpp)
 add_executable(269_AlienDictionary editor/en/269_AlienDictionary.cpp)
+add_executable(126_WordLadderII editor/en/126_WordLadderII.cpp)
