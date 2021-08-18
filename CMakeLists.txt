@@ -135,3 +135,4 @@ add_executable(132_PalindromePartitioningII editor/en/132_PalindromePartitioning
 add_executable(PainFenceVariation PaintFenceVariation.cpp)
 add_executable(PaintFenceVariation PaintFenceVariation.cpp)
 add_executable(1632_RankTransformOfAMatrix editor/en/1632_RankTransformOfAMatrix.cpp)
+add_executable(1048_LongestStringChain editor/en/1048_LongestStringChain.cpp)
